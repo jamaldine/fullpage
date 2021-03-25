@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet');
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+}
+nav ul li {
+  position: relative;
+  margin: 22px;
+  cursor: pointer;
+}
+nav ul li::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  color: salmon;
+  background-color: royalblue;
+  width: 0;
+  height: 4px;
+  transition: width 0.3s;
+}
+nav ul li:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
+nav ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  scroll-snap-type: y mandatory;
+}
+.container .section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  scroll-snap-align: start;
+  background-blend-mode: multiply;
+}
+.container .section:nth-child(1) {
+  background: url(./images/section1.jpeg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+.container .section:nth-child(2) {
+  background: url(./images/section1.jpeg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+.container .section:nth-child(3) {
+  background: url(./images/section1.jpeg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+.container .section .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.container .section .content h2 {
+  color: #111;
+  font-weight: 600;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 2rem;
+}
+.container .section .content p {
+  color: #fff;
+  font-weight: 300;
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 10px;
+}
+
+.container .section .content button {
+  color: rgb(0, 0, 0);
+  font-weight: 300;
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 10px;
+}
+
+/*=========================Contact us=============================*/
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type="submit"] {
+  background-color: #0109ff;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: white;
+  color: #0109ff;
+}
+
+/*=========================About us=============================*/
+
+.row {
+  display: flex;
+  height: 90%;
+  justify-content: center;
+  position: absolute;
+  top: 120px;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+  height: 300px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+.card img {
+  height: 230px;
+}
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
+.container-section {
+  padding: 0 16px;
+  background-color: #ffffffab;
+}
+
+.container-section::after,
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
